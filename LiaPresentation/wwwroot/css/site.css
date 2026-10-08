@@ -1,0 +1,578 @@
+/* ==============================
+   Grundinställningar
+   ============================== */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #eeeeee;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==============================
+   Huvudinnehåll
+   ============================== */
+
+main {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+
+/* ==============================
+   Länkar
+   ============================== */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==============================
+   Responsiv grund
+   ============================== */
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 15px;
+    }
+}
+/* ==============================
+   Navbar
+   ============================== */
+
+.lia-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #d2d2d2;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+
+.lia-navbar-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.lia-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #222222;
+    white-space: nowrap;
+}
+
+
+.lia-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.lia-nav-link {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    color: #222222;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+
+    .lia-nav-link:hover {
+        transform: scale(1.05);
+        background-color: #bcbcbc;
+    }
+
+
+.lia-language {
+    margin-left: 0.5rem;
+    font-weight: 700;
+}
+/* ==============================
+   Mobilmeny
+   ============================== */
+
+.lia-mobile-menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    padding: 0.4rem 0.7rem;
+    font-size: 1.8rem;
+    color: #222222;
+    cursor: pointer;
+}
+
+
+.lia-hamburger {
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+
+.lia-mobile-menu-button:hover .lia-hamburger {
+    transform: scale(1.1);
+}
+
+
+.lia-mobile-menu {
+    display: none;
+}
+/* ==============================
+   Telefon
+   ============================== */
+
+@media (max-width: 767.98px) {
+
+    .lia-navbar-container {
+        padding: 0.7rem 1rem;
+    }
+
+
+    .lia-nav-links {
+        display: none;
+    }
+
+
+    .lia-mobile-menu-button {
+        display: block;
+    }
+
+
+    .lia-mobile-menu.show {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1rem 1rem;
+        background-color: #d2d2d2;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #bdbdbd;
+    }
+
+
+    .lia-mobile-link {
+        padding: 0.8rem 0.5rem;
+        border-radius: 6px;
+        color: #222222;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+
+        .lia-mobile-link:hover {
+            transform: scale(1.02);
+            background-color: #bcbcbc;
+        }
+
+
+    main {
+        padding-top: 80px;
+    }
+}
+/* ==============================
+   Startsida
+   ============================== */
+
+.hero-section {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+
+.hero-content {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 3rem;
+    background-color: #d9d9d9;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.hero-image {
+    flex: 0 0 280px;
+}
+
+
+    .hero-image img {
+        display: block;
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #eeeeee;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    
+.hero-text {
+    flex: 1;
+}
+
+
+    .hero-text h1 {
+        margin-bottom: 1.5rem;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+    .hero-text h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+
+.hero-intro {
+    max-width: 650px;
+    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+
+.hero-period {
+    margin: 0;
+    font-size: 1.05rem;
+}
+/* ==============================
+   Startsida - mindre skärmar
+   ============================== */
+
+@media (max-width: 767.98px) {
+
+    .hero-section {
+        min-height: auto;
+        padding: 2rem 1rem;
+    }
+
+
+    .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+
+
+    .hero-image {
+        flex: none;
+    }
+
+
+        .hero-image img {
+            width: 200px;
+            height: 200px;
+        }
+
+
+    .hero-intro {
+        font-size: 1rem;
+    }
+    
+
+    .hero-period {
+        font-size: 1rem;
+    }
+}
+/* ==============================
+   Innehållssektioner
+   ============================== */
+
+.content-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+}
+
+
+.content-box {
+    width: 100%;
+    max-width: 1000px;
+    padding: 3rem;
+    background-color: #d9d9d9;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+    .content-box h2 {
+        position: relative;
+        margin-bottom: 2rem;
+        padding-bottom: 0.75rem;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 700;
+    }
+        .content-box h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            margin-top: 0.75rem;
+            background-color: #555555;
+            border-radius: 3px;
+        }
+
+    .content-box p {
+        max-width: 800px;
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+
+/* ==============================
+   Scroll-position
+   ============================== */
+
+#start,
+#personligt-brev,
+#cv,
+#ovrig-information {
+    scroll-margin-top: 90px;
+}
+/* ==============================
+   Footer
+   ============================== */
+
+.lia-footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #d2d2d2;
+    border-top: 1px solid #bdbdbd;
+}
+
+
+    .lia-footer p {
+        margin: 0;
+        color: #444444;
+        font-size: 0.9rem;
+    }
+/* ==============================
+   Personligt brev
+   ============================== */
+
+.content-box h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+
+    .content-box h3:first-of-type {
+        margin-top: 0;
+    }
+
+/* ==============================
+   CV
+   ============================== */
+
+.cv-box {
+    max-width: 1100px;
+}
+
+.cv-section {
+    margin-bottom: 3.5rem;
+}
+
+    .cv-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .cv-section h3 {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .cv-section h4 {
+        margin-top: 1.8rem;
+        margin-bottom: 0.6rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+    }
+
+        .cv-section h4:first-child {
+            margin-top: 0;
+        }
+
+    .cv-section p {
+        max-width: 850px;
+    }
+
+    .cv-section ul {
+        max-width: 850px;
+        margin-bottom: 1.2rem;
+        padding-left: 1.5rem;
+    }
+
+    .cv-section li {
+        margin-bottom: 0.4rem;
+        line-height: 1.6;
+    }
+
+.cv-entry {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+    .cv-entry:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .cv-entry h4 {
+        margin-top: 0;
+    }
+
+.cv-meta {
+    color: #555555;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* ==============================
+   CV - Mobil
+   ============================== */
+
+@media (max-width: 767.98px) {
+
+    .cv-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .cv-section {
+        margin-bottom: 2.5rem;
+    }
+
+        .cv-section h3 {
+            font-size: 1.35rem;
+        }
+
+        .cv-section h4 {
+            font-size: 1.1rem;
+        }
+
+    .cv-entry {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .cv-section ul {
+        padding-left: 1.25rem;
+    }
+    .cv-section:not(:last-child)::after {
+        margin-top: 2.5rem;
+    }
+}
+/* ==============================
+   CV - Avdelare mellan sektioner
+   ============================== */
+
+.cv-section:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 3.5rem;
+    background-color: #aaaaaa;
+}
+/* ==============================
+   Övrig information
+   ============================== */
+
+.documents-box {
+    max-width: 1000px;
+}
+
+.document-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #eeeeee;
+    border: 1px solid #c4c4c4;
+    border-radius: 12px;
+}
+
+.document-content {
+    flex: 1;
+}
+
+.document-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.document-card p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.document-button {
+    flex-shrink: 0;
+    padding: 0.7rem 1.2rem;
+    background-color: #c4c4c4;
+    color: #222222;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+    .document-button:hover {
+        transform: scale(1.05);
+        background-color: #b5b5b5;
+    }
+
+
+/* ==============================
+   Övrig information - Mobil
+   ============================== */
+
+@media (max-width: 767.98px) {
+
+    .document-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .document-button {
+        text-align: center;
+    }
+}

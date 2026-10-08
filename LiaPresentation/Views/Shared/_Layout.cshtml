@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - LIA</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="lia-navbar">
+
+            <div class="lia-navbar-container">
+
+                <!-- Namn -->
+                <a class="lia-brand"
+                   asp-controller="Home"
+                   asp-action="Index">
+                    Kim
+                </a>
+
+
+                <!-- Desktop-meny -->
+                <div class="lia-nav-links">
+
+                    <a class="lia-nav-link"
+                       asp-controller="Home"
+                       asp-action="Index">
+                        Hem
+                    </a>
+
+                    <a class="lia-nav-link" href="#personligt-brev">
+                        Personligt brev
+                    </a>
+
+                    <a class="lia-nav-link" href="#cv">
+                        CV
+                    </a>
+
+                    <a class="lia-nav-link" href="#ovrig-information">
+                        Övrig information
+                    </a>
+                    <!--        ej aktiv, förberedels för framtida språkväxling
+                    <a class="lia-nav-link lia-language" href="#">
+                        EN
+                    </a>
+                    -->
+
+                </div>
+
+
+                <!-- Mobilmeny -->
+                <button class="lia-mobile-menu-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mobileMenu"
+                        aria-controls="mobileMenu"
+                        aria-expanded="false"
+                        aria-label="Öppna meny">
+
+                    <span class="lia-hamburger">
+                        ☰
+                    </span>
+
+                </button>
+
+            </div>
+
+            
+            <!-- Mobilmenyn -->
+            <div class="collapse lia-mobile-menu" id="mobileMenu">
+
+                <a class="lia-mobile-link"
+                   asp-controller="Home"
+                   asp-action="Index">
+                    Hem
+                </a>
+
+                <a class="lia-mobile-link" href="#personligt-brev">
+                    Personligt brev
+                </a>
+
+                <a class="lia-mobile-link" href="#cv">
+                    CV
+                </a>
+
+                <a class="lia-mobile-link" href="#ovrig-information">
+                    Övrig information
+                </a>
+                <!--        ej aktiv, förberedels för framtida språkväxling
+                <a class="lia-mobile-link" href="#">
+                    English
+                    -->
+                </a>
+
+            </div>
+
+        </nav>
+    </header>
+    
+    <main>
+        @RenderBody()
+    </main>
+    
+    <footer class="lia-footer">
+
+        <p>
+            © 2026 Kim
+        </p>
+
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
